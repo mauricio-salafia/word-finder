@@ -69,6 +69,11 @@ dlldata.c
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
+# K6 Load Test Results
+benchmark/benchmark-results/basic-load-test*/
+benchmark/benchmark-results/spike-test*/
+benchmark/benchmark-results/stress-test*/
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
