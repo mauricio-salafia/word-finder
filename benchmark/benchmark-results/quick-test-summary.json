@@ -1,0 +1,362 @@
+{
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 50000.041
+  },
+  "metrics": {
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0.590958,
+        "p(95)": 0.653208,
+        "avg": 0.44407283632718375,
+        "min": 0.210625,
+        "med": 0.424208,
+        "max": 35.159208
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 5
+      }
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "min": 5,
+        "max": 5,
+        "value": 5
+      }
+    },
+    "http_req_tls_handshaking": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 30.946,
+        "p(90)": 0.252,
+        "p(95)": 0.299,
+        "avg": 0.14477667621653706,
+        "min": 0.04,
+        "med": 0.12
+      }
+    },
+    "data_received": {
+      "values": {
+        "count": 212004672,
+        "rate": 4240089.96312623
+      },
+      "type": "counter",
+      "contains": "data"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0,
+        "med": 0.001,
+        "max": 0.803,
+        "p(90)": 0.001,
+        "p(95)": 0.001,
+        "avg": 0.0006486181766613904
+      }
+    },
+    "http_req_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 8.769158705432522e-7,
+        "min": 0,
+        "med": 0,
+        "max": 0.317,
+        "p(90)": 0,
+        "p(95)": 0
+      }
+    },
+    "iterations": {
+      "contains": "default",
+      "values": {
+        "count": 458995,
+        "rate": 9179.892472488173
+      },
+      "type": "counter"
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0.3,
+        "p(95)": 0.352,
+        "avg": 0.1792330417542426,
+        "min": 0.051,
+        "med": 0.155,
+        "max": 31.566
+      }
+    },
+    "http_req_sending": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 0.472,
+        "p(90)": 0.003,
+        "p(95)": 0.004,
+        "avg": 0.002246123596089981,
+        "min": 0,
+        "med": 0.002
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "rate": 3570978.171797899,
+        "count": 178549055
+      }
+    },
+    "http_req_duration": {
+      "thresholds": {
+        "p(95)<1000": {
+          "ok": true
+        }
+      },
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.1792330417542426,
+        "min": 0.051,
+        "med": 0.155,
+        "max": 31.566,
+        "p(90)": 0.3,
+        "p(95)": 0.352
+      }
+    },
+    "http_req_failed": {
+      "values": {
+        "rate": 0,
+        "passes": 0,
+        "fails": 917990
+      },
+      "thresholds": {
+        "rate<0.05": {
+          "ok": true
+        }
+      },
+      "type": "rate",
+      "contains": "default"
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 18359.784944976345,
+        "count": 917990
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 1,
+        "passes": 9638895,
+        "fails": 0
+      }
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 5.496,
+        "p(90)": 0.08,
+        "p(95)": 0.106,
+        "avg": 0.03221024194166976,
+        "min": 0.003,
+        "med": 0.016
+      }
+    }
+  },
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "path": "::health status is 200",
+          "id": "ab698ad652ee317628077e42e47eda00",
+          "passes": 458995,
+          "fails": 0,
+          "name": "health status is 200"
+        },
+        {
+          "path": "::health response time < 500ms",
+          "id": "71981151ce7ab9c6a8724f0c58971501",
+          "passes": 458995,
+          "fails": 0,
+          "name": "health response time < 500ms"
+        },
+        {
+          "name": "health has status field",
+          "path": "::health has status field",
+          "id": "14c94eb99222c78a6490d1c65d27bc6e",
+          "passes": 458995,
+          "fails": 0
+        },
+        {
+          "path": "::health has timestamp",
+          "id": "12b85322945a30f4dbdea96dcf3d512d",
+          "passes": 458995,
+          "fails": 0,
+          "name": "health has timestamp"
+        },
+        {
+          "id": "8846297fcce9a908fddeccf71806615b",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search status is 200",
+          "path": "::search status is 200"
+        },
+        {
+          "name": "search response time < 500ms",
+          "path": "::search response time < 500ms",
+          "id": "72444fa357c920dbdaf8f1ce62360d30",
+          "passes": 458995,
+          "fails": 0
+        },
+        {
+          "id": "14b8b0d96cb55a986829102b92248e10",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search response has foundWords",
+          "path": "::search response has foundWords"
+        },
+        {
+          "passes": 458995,
+          "fails": 0,
+          "name": "search response has totalWordsSearched",
+          "path": "::search response has totalWordsSearched",
+          "id": "7f0fdc4cb752924f245412d340b036ab"
+        },
+        {
+          "id": "396a191eaa13984266c94451d9fff205",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search response has processingTimeMs",
+          "path": "::search response has processingTimeMs"
+        },
+        {
+          "id": "287ffd3f74571d672eb0869900a9b572",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search foundWords is array",
+          "path": "::search foundWords is array"
+        },
+        {
+          "name": "search totalWordsSearched is number",
+          "path": "::search totalWordsSearched is number",
+          "id": "e993764af290b8a16ab392299c467f92",
+          "passes": 458995,
+          "fails": 0
+        },
+        {
+          "path": "::search processingTimeMs is number",
+          "id": "06f8deecdae5dd21825656713be306e4",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search processingTimeMs is number"
+        },
+        {
+          "path": "::search foundWords max 10 items",
+          "id": "cb9de45d37444dc4dc1e911440713980",
+          "passes": 458995,
+          "fails": 0,
+          "name": "search foundWords max 10 items"
+        },
+        {
+          "name": "search totalWordsSearched >= 0",
+          "path": "::search totalWordsSearched >= 0",
+          "id": "04df0423624995eabcc18347230be238",
+          "passes": 458995,
+          "fails": 0
+        },
+        {
+          "passes": 458995,
+          "fails": 0,
+          "name": "search processingTimeMs >= 0",
+          "path": "::search processingTimeMs >= 0",
+          "id": "f66e167906148d070b5cf2b4c24607a8"
+        },
+        {
+          "passes": 458995,
+          "fails": 0,
+          "name": "found expected chill",
+          "path": "::found expected chill",
+          "id": "337a546fd4560b19771a74782d323c5b"
+        },
+        {
+          "name": "found expected cold",
+          "path": "::found expected cold",
+          "id": "e0da9d43f77659a1a994e866b35ba911",
+          "passes": 458995,
+          "fails": 0
+        },
+        {
+          "path": "::found expected wind",
+          "id": "41125b4788490fd29b65a43ec47255b2",
+          "passes": 458995,
+          "fails": 0,
+          "name": "found expected wind"
+        },
+        {
+          "path": "::did not find snow",
+          "id": "24a72501a233322d0d40ff23fdd03252",
+          "passes": 458995,
+          "fails": 0,
+          "name": "did not find snow"
+        },
+        {
+          "fails": 0,
+          "name": "total words is 4",
+          "path": "::total words is 4",
+          "id": "127de0aa89d6ae4cb0c3fe845430773e",
+          "passes": 458995
+        },
+        {
+          "path": "::processing time reasonable",
+          "id": "5fcc20cb56d5bf997d2ef92ba3cb0211",
+          "passes": 458995,
+          "fails": 0,
+          "name": "processing time reasonable"
+        }
+      ]
+  },
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  }
+}
